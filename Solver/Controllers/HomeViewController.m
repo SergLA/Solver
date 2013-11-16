@@ -12,8 +12,9 @@
 #import "Constants.h"
 #import "QuestionsDataSource.h"
 #import "PhotosDataSource.h"
-#import "QuestionsViewController.h"
 #import "PhotoSlider.h"
+#import "QuestionsViewController.h"
+#import "SettingsViewController.h"
 
 
 @interface HomeViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
@@ -63,7 +64,7 @@
 
 - (void)photosUpdated:(NSNotification *)notification
 {
-    int photosCount = [[[PhotosDataSource defaultDataSource] allPhotos] count];
+    NSInteger photosCount = [[[PhotosDataSource defaultDataSource] allPhotos] count];
     
     NSString *updateKind = [[notification userInfo] objectForKey:UPDATE_KIND_KEY];
     
@@ -119,8 +120,13 @@
     [self presentViewController:questionsViewController animated:YES completion:nil];
 }
 
-- (IBAction)aboutTouchInside:(id)sender
+- (IBAction)settingsTouchInside:(id)sender
 {
+    SettingsViewController *settingsViewController = [SettingsViewController new];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
+    
+    self.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:navController animated:YES completion:nil];
 }
 
 

@@ -19,6 +19,6 @@
 - (IBAction)deletePhotosTouchInside:(id)sender;
 
 - (IBAction)questionsTouchInside:(id)sender;
-- (IBAction)aboutTouchInside:(id)sender;
+- (IBAction)settingsTouchInside:(id)sender;
 
 @end

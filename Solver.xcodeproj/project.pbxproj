@@ -47,6 +47,14 @@
 		249552471832B8CF005291BA /* Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 249552451832B8CF005291BA /* Ball.png */; };
 		249552481832B8CF005291BA /* Ball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 249552461832B8CF005291BA /* Ball@2x.png */; };
 		2495524C1832BA2B005291BA /* QuestionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2495524B1832BA2B005291BA /* QuestionsDataSource.m */; };
+		24BD90901837864D00F0AB18 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BD908F1837864D00F0AB18 /* SettingsViewController.m */; };
+		24BD90911837864D00F0AB18 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BD908F1837864D00F0AB18 /* SettingsViewController.m */; };
+		24BD90931837866100F0AB18 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BD90921837866100F0AB18 /* SettingsViewController.xib */; };
+		24BD90941837866100F0AB18 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BD90921837866100F0AB18 /* SettingsViewController.xib */; };
+		24BD9097183792AD00F0AB18 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BD9096183792AD00F0AB18 /* AboutViewController.m */; };
+		24BD9098183792AD00F0AB18 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BD9096183792AD00F0AB18 /* AboutViewController.m */; };
+		24BD909A183792BC00F0AB18 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BD9099183792BC00F0AB18 /* AboutViewController.xib */; };
+		24BD909B183792BC00F0AB18 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BD9099183792BC00F0AB18 /* AboutViewController.xib */; };
 		24FF19AB1832E9B300ABDBC4 /* AddQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FF19AA1832E9B300ABDBC4 /* AddQuestionViewController.m */; };
 		24FF19AD1832E9BF00ABDBC4 /* AddQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FF19AC1832E9BF00ABDBC4 /* AddQuestionViewController.xib */; };
 		24FF19B11832F99800ABDBC4 /* PhotoSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FF19B01832F99800ABDBC4 /* PhotoSlider.m */; };
@@ -123,6 +131,12 @@
 		2495524A1832BA2B005291BA /* QuestionsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsDataSource.h; sourceTree = "<group>"; };
 		2495524B1832BA2B005291BA /* QuestionsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsDataSource.m; sourceTree = "<group>"; };
 		2495524D1832BDED005291BA /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		24BD908E1837864D00F0AB18 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		24BD908F1837864D00F0AB18 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		24BD90921837866100F0AB18 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		24BD9095183792AD00F0AB18 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		24BD9096183792AD00F0AB18 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		24BD9099183792BC00F0AB18 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		24FF19A91832E9B300ABDBC4 /* AddQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddQuestionViewController.h; sourceTree = "<group>"; };
 		24FF19AA1832E9B300ABDBC4 /* AddQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddQuestionViewController.m; sourceTree = "<group>"; };
 		24FF19AC1832E9BF00ABDBC4 /* AddQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddQuestionViewController.xib; sourceTree = "<group>"; };
@@ -253,6 +267,10 @@
 				244E8AC91832C74B000E9C42 /* QuestionsViewController.m */,
 				24FF19A91832E9B300ABDBC4 /* AddQuestionViewController.h */,
 				24FF19AA1832E9B300ABDBC4 /* AddQuestionViewController.m */,
+				24BD908E1837864D00F0AB18 /* SettingsViewController.h */,
+				24BD908F1837864D00F0AB18 /* SettingsViewController.m */,
+				24BD9095183792AD00F0AB18 /* AboutViewController.h */,
+				24BD9096183792AD00F0AB18 /* AboutViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -263,6 +281,8 @@
 				24768EAC183298EF0090570C /* HomeViewController.xib */,
 				244E8ACC1832C763000E9C42 /* QuestionsViewController.xib */,
 				24FF19AC1832E9BF00ABDBC4 /* AddQuestionViewController.xib */,
+				24BD90921837866100F0AB18 /* SettingsViewController.xib */,
+				24BD9099183792BC00F0AB18 /* AboutViewController.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -445,8 +465,10 @@
 				24FF19C01833050C00ABDBC4 /* image2.png in Resources */,
 				249552431832B0BE005291BA /* add_photo_camera_roll.png in Resources */,
 				249552331832A784005291BA /* Icon@2x.png in Resources */,
+				24BD90931837866100F0AB18 /* SettingsViewController.xib in Resources */,
 				24768EAD183298EF0090570C /* HomeViewController.xib in Resources */,
 				2495523C1832AE48005291BA /* add_photo@2x.png in Resources */,
+				24BD909A183792BC00F0AB18 /* AboutViewController.xib in Resources */,
 				2495522D1832A784005291BA /* Default@2x.png in Resources */,
 				2495522B1832A784005291BA /* Default-568h@2x.png in Resources */,
 				24FF19C21833050C00ABDBC4 /* image3.png in Resources */,
@@ -460,6 +482,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				24FF19BF1833050C00ABDBC4 /* image1.png in Resources */,
+				24BD909B183792BC00F0AB18 /* AboutViewController.xib in Resources */,
+				24BD90941837866100F0AB18 /* SettingsViewController.xib in Resources */,
 				24FF19C31833050C00ABDBC4 /* image3.png in Resources */,
 				24768E9A183293D70090570C /* InfoPlist.strings in Resources */,
 				24FF19C11833050C00ABDBC4 /* image2.png in Resources */,
@@ -480,6 +504,7 @@
 				24FF19B81832FC4900ABDBC4 /* PhotosDataSource.m in Sources */,
 				24768E83183293D70090570C /* main.m in Sources */,
 				24FF19B41832FA0600ABDBC4 /* ExtendedPickerView.m in Sources */,
+				24BD9097183792AD00F0AB18 /* AboutViewController.m in Sources */,
 				2495524C1832BA2B005291BA /* QuestionsDataSource.m in Sources */,
 				24FF19B11832F99800ABDBC4 /* PhotoSlider.m in Sources */,
 				24FF19CE183309E300ABDBC4 /* UIImage+RoundedCorner.m in Sources */,
@@ -487,6 +512,7 @@
 				24FF19C6183309B800ABDBC4 /* UIImage+Resize.m in Sources */,
 				24768EAA183298BE0090570C /* HomeViewController.m in Sources */,
 				244E8AD11832CF3C000E9C42 /* Constants.m in Sources */,
+				24BD90901837864D00F0AB18 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +527,8 @@
 				24FF19B91832FC4900ABDBC4 /* PhotosDataSource.m in Sources */,
 				24FF19CD183309E300ABDBC4 /* UIImage+Alpha.m in Sources */,
 				24FF19B51832FA0600ABDBC4 /* ExtendedPickerView.m in Sources */,
+				24BD90911837864D00F0AB18 /* SettingsViewController.m in Sources */,
+				24BD9098183792AD00F0AB18 /* AboutViewController.m in Sources */,
 				244E8AD21832CF3C000E9C42 /* Constants.m in Sources */,
 				24FF19C7183309B800ABDBC4 /* UIImage+Resize.m in Sources */,
 			);
