@@ -211,13 +211,26 @@ typedef enum
 
 - (IBAction)addPhotoTouchInside:(id)sender
 {
-    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-    [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
-    imagePicker.allowsEditing = YES;
-    imagePicker.showsCameraControls = YES;
-    imagePicker.delegate = self;
-    
-    [self presentViewController:imagePicker animated:YES completion:nil];
+    if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear])
+    {
+        UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+        
+        [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
+        imagePicker.allowsEditing = YES;
+        imagePicker.showsCameraControls = YES;
+        imagePicker.delegate = self;
+        
+        [self presentViewController:imagePicker animated:YES completion:nil];
+    }
+    else
+    {
+        static NSInteger number = 1;
+        NSString *imageName = [NSString stringWithFormat:@"image%d.png", number];
+        UIImage *photo = [UIImage imageNamed:imageName];
+        number = (number == 3) ? 1 : (number + 1);
+        
+        [[PhotosDataSource defaultDataSource] addPhoto:photo];
+    }
 }
 
 - (IBAction)addPhotoFromCameraRollTouchInside:(id)sender
