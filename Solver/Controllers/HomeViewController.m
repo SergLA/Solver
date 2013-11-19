@@ -16,6 +16,7 @@
 #import "PhotoSlider.h"
 #import "QuestionsViewController.h"
 #import "SettingsViewController.h"
+#import "ELCImagePickerController.h"
 
 
 typedef enum
@@ -26,7 +27,7 @@ typedef enum
 } ViewState;
 
 
-@interface HomeViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface HomeViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, ELCImagePickerControllerDelegate>
 
 @property (nonatomic, assign) ViewState state;
 @property (nonatomic, weak) PhotoSlider *photoSlider;
@@ -235,10 +236,11 @@ typedef enum
 
 - (IBAction)addPhotoFromCameraRollTouchInside:(id)sender
 {
-    NSString *imageName = [NSString stringWithFormat:@"image%d.png", rand() % 3 + 1];
-    UIImage *photo = [UIImage imageNamed:imageName];
+    ELCImagePickerController *imagePickerController = [[ELCImagePickerController alloc] init];
+    imagePickerController.maximumImagesCount = 15;
+    imagePickerController.imagePickerDelegate = self;
     
-    [[PhotosDataSource defaultDataSource] addPhoto:photo];
+    [self presentViewController:imagePickerController animated:YES completion:nil];
 }
 
 - (IBAction)addPhotoFromContactsTouchInside:(id)sender
@@ -274,7 +276,7 @@ typedef enum
 {
     UIImage *photo = [info objectForKey:UIImagePickerControllerOriginalImage];
     photo = [photo resizedImageWithContentMode:UIViewContentModeScaleAspectFit
-                                        bounds:CGSizeMake(100, 100)
+                                        bounds:CGSizeMake(170, 170)
                           interpolationQuality:kCGInterpolationHigh];
 	
     [[PhotosDataSource defaultDataSource] addPhoto:photo];
@@ -283,6 +285,29 @@ typedef enum
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+#pragma mark - ELCImagePickerControllerDelegate
+
+- (void)elcImagePickerController:(ELCImagePickerController *)picker didFinishPickingMediaWithInfo:(NSArray *)info
+{
+    [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
+    
+    for (NSDictionary *dict in info)
+    {
+        UIImage *photo = [dict objectForKey:UIImagePickerControllerOriginalImage];
+        photo = [photo resizedImageWithContentMode:UIViewContentModeScaleAspectFit
+                                            bounds:CGSizeMake(170, 170)
+                              interpolationQuality:kCGInterpolationHigh];
+        
+        [[PhotosDataSource defaultDataSource] addPhoto:photo];
+	}
+}
+
+- (void)elcImagePickerControllerDidCancel:(ELCImagePickerController *)picker
 {
     [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
 }

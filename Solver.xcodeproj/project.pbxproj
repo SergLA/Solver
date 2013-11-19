@@ -57,6 +57,27 @@
 		24BD909B183792BC00F0AB18 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BD9099183792BC00F0AB18 /* AboutViewController.xib */; };
 		24BD909E1839135600F0AB18 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BD909D1839135600F0AB18 /* Settings.m */; };
 		24BD909F1839135600F0AB18 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BD909D1839135600F0AB18 /* Settings.m */; };
+		24D900D5183BF83100BBC069 /* ELCAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D900C4183BF83100BBC069 /* ELCAlbumPickerController.m */; };
+		24D900D6183BF83100BBC069 /* ELCAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D900C4183BF83100BBC069 /* ELCAlbumPickerController.m */; };
+		24D900D7183BF83100BBC069 /* ELCAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D900C6183BF83100BBC069 /* ELCAsset.m */; };
+		24D900D8183BF83100BBC069 /* ELCAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D900C6183BF83100BBC069 /* ELCAsset.m */; };
+		24D900D9183BF83100BBC069 /* ELCAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D900C8183BF83100BBC069 /* ELCAssetCell.m */; };
+		24D900DA183BF83100BBC069 /* ELCAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D900C8183BF83100BBC069 /* ELCAssetCell.m */; };
+		24D900DB183BF83100BBC069 /* ELCAssetTablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D900CC183BF83100BBC069 /* ELCAssetTablePicker.m */; };
+		24D900DC183BF83100BBC069 /* ELCAssetTablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D900CC183BF83100BBC069 /* ELCAssetTablePicker.m */; };
+		24D900DD183BF83100BBC069 /* ELCImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D900CE183BF83100BBC069 /* ELCImagePickerController.m */; };
+		24D900DE183BF83100BBC069 /* ELCImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D900CE183BF83100BBC069 /* ELCImagePickerController.m */; };
+		24D900DF183BF83100BBC069 /* ELCAlbumPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D900D0183BF83100BBC069 /* ELCAlbumPickerController.xib */; };
+		24D900E0183BF83100BBC069 /* ELCAlbumPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D900D0183BF83100BBC069 /* ELCAlbumPickerController.xib */; };
+		24D900E1183BF83100BBC069 /* ELCAssetPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D900D1183BF83100BBC069 /* ELCAssetPicker.xib */; };
+		24D900E2183BF83100BBC069 /* ELCAssetPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D900D1183BF83100BBC069 /* ELCAssetPicker.xib */; };
+		24D900E3183BF83100BBC069 /* ELCAssetTablePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D900D2183BF83100BBC069 /* ELCAssetTablePicker.xib */; };
+		24D900E4183BF83100BBC069 /* ELCAssetTablePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D900D2183BF83100BBC069 /* ELCAssetTablePicker.xib */; };
+		24D900E5183BF83100BBC069 /* Overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D900D3183BF83100BBC069 /* Overlay.png */; };
+		24D900E6183BF83100BBC069 /* Overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D900D3183BF83100BBC069 /* Overlay.png */; };
+		24D900E7183BF83100BBC069 /* Overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D900D4183BF83100BBC069 /* Overlay@2x.png */; };
+		24D900E8183BF83100BBC069 /* Overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D900D4183BF83100BBC069 /* Overlay@2x.png */; };
+		24D900EA183C002E00BBC069 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D900E9183C002E00BBC069 /* AssetsLibrary.framework */; };
 		24FF19AB1832E9B300ABDBC4 /* AddQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FF19AA1832E9B300ABDBC4 /* AddQuestionViewController.m */; };
 		24FF19AD1832E9BF00ABDBC4 /* AddQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FF19AC1832E9BF00ABDBC4 /* AddQuestionViewController.xib */; };
 		24FF19B11832F99800ABDBC4 /* PhotoSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FF19B01832F99800ABDBC4 /* PhotoSlider.m */; };
@@ -141,6 +162,24 @@
 		24BD9099183792BC00F0AB18 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		24BD909C1839135600F0AB18 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		24BD909D1839135600F0AB18 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		24D900C3183BF83100BBC069 /* ELCAlbumPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAlbumPickerController.h; sourceTree = "<group>"; };
+		24D900C4183BF83100BBC069 /* ELCAlbumPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAlbumPickerController.m; sourceTree = "<group>"; };
+		24D900C5183BF83100BBC069 /* ELCAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAsset.h; sourceTree = "<group>"; };
+		24D900C6183BF83100BBC069 /* ELCAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAsset.m; sourceTree = "<group>"; };
+		24D900C7183BF83100BBC069 /* ELCAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAssetCell.h; sourceTree = "<group>"; };
+		24D900C8183BF83100BBC069 /* ELCAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAssetCell.m; sourceTree = "<group>"; };
+		24D900C9183BF83100BBC069 /* ELCAssetPickerFilterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAssetPickerFilterDelegate.h; sourceTree = "<group>"; };
+		24D900CA183BF83100BBC069 /* ELCAssetSelectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAssetSelectionDelegate.h; sourceTree = "<group>"; };
+		24D900CB183BF83100BBC069 /* ELCAssetTablePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAssetTablePicker.h; sourceTree = "<group>"; };
+		24D900CC183BF83100BBC069 /* ELCAssetTablePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAssetTablePicker.m; sourceTree = "<group>"; };
+		24D900CD183BF83100BBC069 /* ELCImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCImagePickerController.h; sourceTree = "<group>"; };
+		24D900CE183BF83100BBC069 /* ELCImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCImagePickerController.m; sourceTree = "<group>"; };
+		24D900D0183BF83100BBC069 /* ELCAlbumPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAlbumPickerController.xib; sourceTree = "<group>"; };
+		24D900D1183BF83100BBC069 /* ELCAssetPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAssetPicker.xib; sourceTree = "<group>"; };
+		24D900D2183BF83100BBC069 /* ELCAssetTablePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAssetTablePicker.xib; sourceTree = "<group>"; };
+		24D900D3183BF83100BBC069 /* Overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Overlay.png; sourceTree = "<group>"; };
+		24D900D4183BF83100BBC069 /* Overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Overlay@2x.png"; sourceTree = "<group>"; };
+		24D900E9183C002E00BBC069 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		24FF19A91832E9B300ABDBC4 /* AddQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddQuestionViewController.h; sourceTree = "<group>"; };
 		24FF19AA1832E9B300ABDBC4 /* AddQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddQuestionViewController.m; sourceTree = "<group>"; };
 		24FF19AC1832E9BF00ABDBC4 /* AddQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddQuestionViewController.xib; sourceTree = "<group>"; };
@@ -166,6 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24D900EA183C002E00BBC069 /* AssetsLibrary.framework in Frameworks */,
 				24768E79183293D70090570C /* CoreGraphics.framework in Frameworks */,
 				24768E7B183293D70090570C /* UIKit.framework in Frameworks */,
 				24768E77183293D70090570C /* Foundation.framework in Frameworks */,
@@ -208,6 +248,7 @@
 		24768E75183293D70090570C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24D900E9183C002E00BBC069 /* AssetsLibrary.framework */,
 				24768E76183293D70090570C /* Foundation.framework */,
 				24768E78183293D70090570C /* CoreGraphics.framework */,
 				24768E7A183293D70090570C /* UIKit.framework */,
@@ -347,9 +388,42 @@
 			path = DataSources;
 			sourceTree = "<group>";
 		};
+		24D900C2183BF83100BBC069 /* ELCImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				24D900C3183BF83100BBC069 /* ELCAlbumPickerController.h */,
+				24D900C4183BF83100BBC069 /* ELCAlbumPickerController.m */,
+				24D900C5183BF83100BBC069 /* ELCAsset.h */,
+				24D900C6183BF83100BBC069 /* ELCAsset.m */,
+				24D900C7183BF83100BBC069 /* ELCAssetCell.h */,
+				24D900C8183BF83100BBC069 /* ELCAssetCell.m */,
+				24D900C9183BF83100BBC069 /* ELCAssetPickerFilterDelegate.h */,
+				24D900CA183BF83100BBC069 /* ELCAssetSelectionDelegate.h */,
+				24D900CB183BF83100BBC069 /* ELCAssetTablePicker.h */,
+				24D900CC183BF83100BBC069 /* ELCAssetTablePicker.m */,
+				24D900CD183BF83100BBC069 /* ELCImagePickerController.h */,
+				24D900CE183BF83100BBC069 /* ELCImagePickerController.m */,
+				24D900CF183BF83100BBC069 /* Resources */,
+			);
+			path = ELCImagePicker;
+			sourceTree = "<group>";
+		};
+		24D900CF183BF83100BBC069 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				24D900D0183BF83100BBC069 /* ELCAlbumPickerController.xib */,
+				24D900D1183BF83100BBC069 /* ELCAssetPicker.xib */,
+				24D900D2183BF83100BBC069 /* ELCAssetTablePicker.xib */,
+				24D900D3183BF83100BBC069 /* Overlay.png */,
+				24D900D4183BF83100BBC069 /* Overlay@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		24FF19AE1832F97800ABDBC4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				24D900C2183BF83100BBC069 /* ELCImagePicker */,
 				24FF19C8183309E300ABDBC4 /* UIImage+Alpha.h */,
 				24FF19C9183309E300ABDBC4 /* UIImage+Alpha.m */,
 				24FF19CA183309E300ABDBC4 /* UIImage+RoundedCorner.h */,
@@ -452,7 +526,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24D900E5183BF83100BBC069 /* Overlay.png in Resources */,
 				24FF19AD1832E9BF00ABDBC4 /* AddQuestionViewController.xib in Resources */,
+				24D900E7183BF83100BBC069 /* Overlay@2x.png in Resources */,
 				2495523B1832AE48005291BA /* add_photo.png in Resources */,
 				249552301832A784005291BA /* Icon-Small.png in Resources */,
 				249552471832B8CF005291BA /* Ball.png in Resources */,
@@ -461,12 +537,14 @@
 				2495522F1832A784005291BA /* Icon-80.png in Resources */,
 				244E8ACD1832C763000E9C42 /* QuestionsViewController.xib in Resources */,
 				249552371832AC23005291BA /* trash.png in Resources */,
+				24D900E1183BF83100BBC069 /* ELCAssetPicker.xib in Resources */,
 				24FF19BE1833050C00ABDBC4 /* image1.png in Resources */,
 				249552321832A784005291BA /* Icon.png in Resources */,
 				249552421832B0BE005291BA /* add_contact@2x.png in Resources */,
 				249552411832B0BE005291BA /* add_contact.png in Resources */,
 				249552481832B8CF005291BA /* Ball@2x.png in Resources */,
 				24768E81183293D70090570C /* InfoPlist.strings in Resources */,
+				24D900E3183BF83100BBC069 /* ELCAssetTablePicker.xib in Resources */,
 				249552311832A784005291BA /* Icon-Small@2x.png in Resources */,
 				24FF19C01833050C00ABDBC4 /* image2.png in Resources */,
 				249552431832B0BE005291BA /* add_photo_camera_roll.png in Resources */,
@@ -477,6 +555,7 @@
 				24BD909A183792BC00F0AB18 /* AboutViewController.xib in Resources */,
 				2495522D1832A784005291BA /* Default@2x.png in Resources */,
 				2495522B1832A784005291BA /* Default-568h@2x.png in Resources */,
+				24D900DF183BF83100BBC069 /* ELCAlbumPickerController.xib in Resources */,
 				24FF19C21833050C00ABDBC4 /* image3.png in Resources */,
 				2495522E1832A784005291BA /* Icon-120.png in Resources */,
 				2495522C1832A784005291BA /* Default.png in Resources */,
@@ -489,9 +568,14 @@
 			files = (
 				24FF19BF1833050C00ABDBC4 /* image1.png in Resources */,
 				24BD909B183792BC00F0AB18 /* AboutViewController.xib in Resources */,
+				24D900E4183BF83100BBC069 /* ELCAssetTablePicker.xib in Resources */,
 				24BD90941837866100F0AB18 /* SettingsViewController.xib in Resources */,
+				24D900E6183BF83100BBC069 /* Overlay.png in Resources */,
+				24D900E8183BF83100BBC069 /* Overlay@2x.png in Resources */,
 				24FF19C31833050C00ABDBC4 /* image3.png in Resources */,
+				24D900E0183BF83100BBC069 /* ELCAlbumPickerController.xib in Resources */,
 				24768E9A183293D70090570C /* InfoPlist.strings in Resources */,
+				24D900E2183BF83100BBC069 /* ELCAssetPicker.xib in Resources */,
 				24FF19C11833050C00ABDBC4 /* image2.png in Resources */,
 				24768EAE183298EF0090570C /* HomeViewController.xib in Resources */,
 			);
@@ -505,8 +589,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				24768E87183293D70090570C /* AppDelegate.m in Sources */,
+				24D900D7183BF83100BBC069 /* ELCAsset.m in Sources */,
 				244E8ACA1832C74B000E9C42 /* QuestionsViewController.m in Sources */,
 				24FF19AB1832E9B300ABDBC4 /* AddQuestionViewController.m in Sources */,
+				24D900D9183BF83100BBC069 /* ELCAssetCell.m in Sources */,
+				24D900DD183BF83100BBC069 /* ELCImagePickerController.m in Sources */,
+				24D900D5183BF83100BBC069 /* ELCAlbumPickerController.m in Sources */,
 				24FF19B81832FC4900ABDBC4 /* PhotosDataSource.m in Sources */,
 				24768E83183293D70090570C /* main.m in Sources */,
 				24FF19B41832FA0600ABDBC4 /* ExtendedPickerView.m in Sources */,
@@ -515,6 +603,7 @@
 				2495524C1832BA2B005291BA /* QuestionsDataSource.m in Sources */,
 				24FF19B11832F99800ABDBC4 /* PhotoSlider.m in Sources */,
 				24FF19CE183309E300ABDBC4 /* UIImage+RoundedCorner.m in Sources */,
+				24D900DB183BF83100BBC069 /* ELCAssetTablePicker.m in Sources */,
 				24FF19CC183309E300ABDBC4 /* UIImage+Alpha.m in Sources */,
 				24FF19C6183309B800ABDBC4 /* UIImage+Resize.m in Sources */,
 				24768EAA183298BE0090570C /* HomeViewController.m in Sources */,
@@ -528,17 +617,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				244E8ACB1832C74B000E9C42 /* QuestionsViewController.m in Sources */,
+				24D900D8183BF83100BBC069 /* ELCAsset.m in Sources */,
 				24FF19CF183309E300ABDBC4 /* UIImage+RoundedCorner.m in Sources */,
 				24BD909F1839135600F0AB18 /* Settings.m in Sources */,
 				24768E9C183293D70090570C /* SolverTests.m in Sources */,
+				24D900DA183BF83100BBC069 /* ELCAssetCell.m in Sources */,
 				24768EAB183298BE0090570C /* HomeViewController.m in Sources */,
 				24FF19B91832FC4900ABDBC4 /* PhotosDataSource.m in Sources */,
 				24FF19CD183309E300ABDBC4 /* UIImage+Alpha.m in Sources */,
 				24FF19B51832FA0600ABDBC4 /* ExtendedPickerView.m in Sources */,
+				24D900DC183BF83100BBC069 /* ELCAssetTablePicker.m in Sources */,
 				24BD90911837864D00F0AB18 /* SettingsViewController.m in Sources */,
+				24D900D6183BF83100BBC069 /* ELCAlbumPickerController.m in Sources */,
 				24BD9098183792AD00F0AB18 /* AboutViewController.m in Sources */,
 				244E8AD21832CF3C000E9C42 /* Constants.m in Sources */,
 				24FF19C7183309B800ABDBC4 /* UIImage+Resize.m in Sources */,
+				24D900DE183BF83100BBC069 /* ELCImagePickerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
