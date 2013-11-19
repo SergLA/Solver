@@ -78,6 +78,7 @@
 		24D900E7183BF83100BBC069 /* Overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D900D4183BF83100BBC069 /* Overlay@2x.png */; };
 		24D900E8183BF83100BBC069 /* Overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D900D4183BF83100BBC069 /* Overlay@2x.png */; };
 		24D900EA183C002E00BBC069 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D900E9183C002E00BBC069 /* AssetsLibrary.framework */; };
+		24D900EC183C091C00BBC069 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D900EB183C091C00BBC069 /* QuartzCore.framework */; };
 		24FF19AB1832E9B300ABDBC4 /* AddQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FF19AA1832E9B300ABDBC4 /* AddQuestionViewController.m */; };
 		24FF19AD1832E9BF00ABDBC4 /* AddQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FF19AC1832E9BF00ABDBC4 /* AddQuestionViewController.xib */; };
 		24FF19B11832F99800ABDBC4 /* PhotoSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FF19B01832F99800ABDBC4 /* PhotoSlider.m */; };
@@ -180,6 +181,7 @@
 		24D900D3183BF83100BBC069 /* Overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Overlay.png; sourceTree = "<group>"; };
 		24D900D4183BF83100BBC069 /* Overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Overlay@2x.png"; sourceTree = "<group>"; };
 		24D900E9183C002E00BBC069 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		24D900EB183C091C00BBC069 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		24FF19A91832E9B300ABDBC4 /* AddQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddQuestionViewController.h; sourceTree = "<group>"; };
 		24FF19AA1832E9B300ABDBC4 /* AddQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddQuestionViewController.m; sourceTree = "<group>"; };
 		24FF19AC1832E9BF00ABDBC4 /* AddQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddQuestionViewController.xib; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24D900EC183C091C00BBC069 /* QuartzCore.framework in Frameworks */,
 				24D900EA183C002E00BBC069 /* AssetsLibrary.framework in Frameworks */,
 				24768E79183293D70090570C /* CoreGraphics.framework in Frameworks */,
 				24768E7B183293D70090570C /* UIKit.framework in Frameworks */,
@@ -248,6 +251,7 @@
 		24768E75183293D70090570C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24D900EB183C091C00BBC069 /* QuartzCore.framework */,
 				24D900E9183C002E00BBC069 /* AssetsLibrary.framework */,
 				24768E76183293D70090570C /* Foundation.framework */,
 				24768E78183293D70090570C /* CoreGraphics.framework */,

@@ -7,6 +7,7 @@
 //
 
 
+#import <QuartzCore/QuartzCore.h>
 #import "UIImage+Resize.h"
 #import "HomeViewController.h"
 #import "Constants.h"
@@ -93,6 +94,8 @@ typedef enum
 {
     [self resignFirstResponder];
     
+    [self setWinningImageToBeReady];
+    
     [super viewWillDisappear:animated];
 }
 
@@ -147,6 +150,25 @@ typedef enum
     {
         [[PhotosDataSource defaultDataSource] removePhotoFromIndex:self.winningPhotoID];
     }
+    
+    self.winningPhotoID = -1;
+}
+
+- (void)setWinningImageToBeReady
+{
+    if (self.state != ViewStateReady)
+    {
+        self.state = ViewStateReady;
+        
+        [self.ballImageView.layer removeAllAnimations];
+        [self.winningPhotoImageView.layer removeAllAnimations];
+        
+        self.winningPhotoImageView.alpha = 1.0;
+        self.winningPhotoImageView.image = nil;
+        self.winningPhotoImageView.frame = CGRectMake(85, 85, 170, 170);
+        
+        [self.ballViewPlaceholder sendSubviewToBack:self.winningPhotoImageView];
+    }
 }
 
 - (void)didTapOnWinningImage
@@ -158,19 +180,31 @@ typedef enum
     
     [UIView animateWithDuration:0.3
                      animations:^{
-                         CGRect rect = CGRectMake(110, 110, 120, 120);
-                         self.winningPhotoImageView.frame = rect;
+                         if (self.state != ViewStateReady)
+                         {
+                             CGRect rect = CGRectMake(110, 110, 120, 120);
+                             self.winningPhotoImageView.frame = rect;
+                         }
                      }
                      completion:^(BOOL finished) {
                          [self.ballViewPlaceholder sendSubviewToBack:self.ballImageView];
-                         [UIView animateWithDuration:0.5
-                                          animations:^{
-                                              CGRect rect = CGRectMake(30, 30, 280, 280);
-                                              self.winningPhotoImageView.frame = rect;
-                                          }
-                                          completion:^(BOOL finished) {
-                                              self.state = ViewStateShowingPhoto;
-                                          }];
+                         if (self.state != ViewStateReady)
+                         {
+                             [UIView animateWithDuration:0.5
+                                              animations:^{
+                                                  if (self.state != ViewStateReady)
+                                                  {
+                                                      CGRect rect = CGRectMake(30, 30, 280, 280);
+                                                      self.winningPhotoImageView.frame = rect;
+                                                  }
+                                              }
+                                              completion:^(BOOL finished) {
+                                                  if (self.state != ViewStateReady)
+                                                  {
+                                                      self.state = ViewStateShowingPhoto;
+                                                  }
+                                              }];
+                         }
                      }];
 }
 
@@ -183,26 +217,29 @@ typedef enum
     
     [UIView animateWithDuration:0.3
                      animations:^{
-                         CGRect rect = CGRectMake(25, 25, 290, 290);
-                         self.winningPhotoImageView.frame = rect;
+                         if (self.state != ViewStateReady)
+                         {
+                             CGRect rect = CGRectMake(25, 25, 290, 290);
+                             self.winningPhotoImageView.frame = rect;
+                         }
                      }
                      completion:^(BOOL finished) {
                          [self.ballViewPlaceholder sendSubviewToBack:self.ballImageView];
-                         [UIView animateWithDuration:0.3
-                                          animations:^{
-                                              CGRect rect = CGRectMake(165, 165, 10, 10);
-                                              self.winningPhotoImageView.frame = rect;
-                                              self.winningPhotoImageView.alpha = 0.2;
-                                          }
-                                          completion:^(BOOL finished) {
-                                              self.winningPhotoImageView.alpha = 1.0;
-                                              self.winningPhotoImageView.image = nil;
-                                              self.winningPhotoImageView.frame = CGRectMake(85, 85, 170, 170);
-                                              
-                                              [self.ballViewPlaceholder sendSubviewToBack:self.winningPhotoImageView];
-                                              
-                                              self.state = ViewStateReady;
-                                          }];
+                         if (self.state != ViewStateReady)
+                         {
+                             [UIView animateWithDuration:0.3
+                                              animations:^{
+                                                  if (self.state != ViewStateReady)
+                                                  {
+                                                      CGRect rect = CGRectMake(165, 165, 10, 10);
+                                                      self.winningPhotoImageView.frame = rect;
+                                                      self.winningPhotoImageView.alpha = 0.2;
+                                                  }
+                                              }
+                                              completion:^(BOOL finished) {
+                                                  [self setWinningImageToBeReady];
+                                              }];
+                         }
                      }];
     
 }
@@ -314,6 +351,11 @@ typedef enum
 
 
 #pragma mark - UIResponder methods
+
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    [self setWinningImageToBeReady];
+}
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
