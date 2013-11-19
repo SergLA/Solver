@@ -262,10 +262,8 @@ typedef enum
     }
     else
     {
-        static NSInteger number = 1;
-        NSString *imageName = [NSString stringWithFormat:@"image%d.png", number];
-        UIImage *photo = [UIImage imageNamed:imageName];
-        number = (number == 3) ? 1 : (number + 1);
+        // Avoid 0-starting counting by +1.
+        UIImage *photo = randomImageWithNumber([[[PhotosDataSource defaultDataSource] allPhotos] count] + 1);
         
         [[PhotosDataSource defaultDataSource] addPhoto:photo];
     }

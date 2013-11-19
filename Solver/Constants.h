@@ -41,4 +41,6 @@ NSString * const DELETE_ROW_CONFIRMATION;
 
 #pragma mark - Functions
 
+UIColor* RGBA(float r, float g, float b, float a);
 NSString* filePathForFileName(NSString *fileName);
+UIImage* randomImageWithNumber(NSInteger number);

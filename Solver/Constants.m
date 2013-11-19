@@ -42,6 +42,11 @@ NSString * const DELETE_ROW_CONFIRMATION = @"Remove?";
 
 #pragma mark - Functions
 
+UIColor* RGBA(float r, float g, float b, float a)
+{
+    return [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a];
+}
+
 NSString* filePathForFileName(NSString *fileName)
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -50,3 +55,52 @@ NSString* filePathForFileName(NSString *fileName)
     
     return path;
 }
+
+CGRect getRandomSquare(CGRect containerRect, float maxWidth)
+{
+    CGFloat x = (rand() % lroundf(containerRect.size.width)) - (maxWidth / 2.0);
+    CGFloat y = (rand() % lroundf(containerRect.size.height)) - (maxWidth / 2.0);
+    CGFloat widthHeight = (rand() % lroundf(maxWidth * 2.0 / 3.0)) + maxWidth / 3.0;
+    
+    return CGRectMake(x, y, widthHeight, widthHeight);
+}
+
+UIImage* randomImageWithNumber(NSInteger number)
+{
+    CGRect imageRect = CGRectMake(0.0f, 0.0f, 170.0f, 170.0f);
+    UIGraphicsBeginImageContext(imageRect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    // Add some background
+    UIColor *color = RGBA(rand() % 255, rand() % 255, rand() % 255, 0.2);
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextFillRect(context, imageRect);
+    
+    // Add some sircles
+    for (int i = 0; i<4; i++)
+    {
+        CGContextSetLineWidth(context, 3.0);
+        color = RGBA(rand() % 255, rand() % 255, rand() % 255, 0.6);
+        CGContextSetStrokeColorWithColor(context, color.CGColor);
+        CGContextSetFillColorWithColor(context, color.CGColor);
+        CGContextBeginPath(context);
+        CGContextAddEllipseInRect(context, getRandomSquare(imageRect, 150.0));
+        CGContextDrawPath(context, kCGPathFillStroke);
+    }
+    
+    NSString *string = [NSString stringWithFormat:@"%d", number];
+    CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
+    CGRect textRect = imageRect;
+    textRect.origin.y = (number >= 100) ? 35 : 10;
+    [string drawInRect:textRect
+              withFont:[UIFont systemFontOfSize:(number >= 100) ? 90 : 128]
+         lineBreakMode:NSLineBreakByClipping
+             alignment:NSTextAlignmentCenter];
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
+
