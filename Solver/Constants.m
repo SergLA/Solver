@@ -72,7 +72,7 @@ UIImage* randomImageWithNumber(NSInteger number)
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     // Add some background
-    UIColor *color = RGBA(rand() % 255, rand() % 255, rand() % 255, 0.2);
+    UIColor *color = RGBA(rand() % 255, rand() % 255, rand() % 255, 0.85);
     CGContextSetFillColorWithColor(context, color.CGColor);
     CGContextFillRect(context, imageRect);
     
