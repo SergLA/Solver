@@ -10,6 +10,7 @@
 #import "UIImage+Resize.h"
 #import "HomeViewController.h"
 #import "Constants.h"
+#import "Settings.h"
 #import "QuestionsDataSource.h"
 #import "PhotosDataSource.h"
 #import "PhotoSlider.h"
@@ -20,6 +21,7 @@
 @interface HomeViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (nonatomic, weak) PhotoSlider *photoSlider;
+@property (nonatomic, assign) NSInteger selectedPhotoID;
 
 @end
 
@@ -48,6 +50,42 @@
     [super viewWillAppear:animated];
     
     self.questionLabel.text = [[QuestionsDataSource defaultDataSource] selectedQuestion];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear: animated];
+    
+    [self becomeFirstResponder];
+    
+    if (![Settings defaultSettings].didApplicationAlreadyRun)
+    {
+        //Show pretty semitransparent screen with some help
+        [Settings defaultSettings].didApplicationAlreadyRun = YES;
+    }
+    
+    if ([Settings defaultSettings].newApplicationStart)
+    {
+        [Settings defaultSettings].newApplicationStart = NO;
+        [self questionsTouchInside:nil];
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self resignFirstResponder];
+    
+    [super viewWillDisappear:animated];
+}
+
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 
@@ -147,6 +185,29 @@
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+#pragma mark - Shacking handling
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake)
+    {
+        NSInteger photosCount = [[[PhotosDataSource defaultDataSource] allPhotos] count];
+        if (photosCount == 0)
+        {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Solver"
+                                                                message:@"Please add some photos to be shaked!"
+                                                               delegate:self
+                                                      cancelButtonTitle:@"OK"
+                                                      otherButtonTitles:nil];
+            [alertView show];
+            return;
+        }
+        
+        self.selectedPhotoID = rand() % photosCount;
+    }
 }
 
 @end

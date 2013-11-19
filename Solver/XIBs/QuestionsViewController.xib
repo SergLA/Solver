@@ -23,7 +23,7 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <items>
                         <navigationItem title="Questions" id="KI3-Bc-Dwj">
-                            <barButtonItem key="leftBarButtonItem" title="Solve it" style="plain" id="qu6-Cl-tba">
+                            <barButtonItem key="leftBarButtonItem" title="Solve it" id="qu6-Cl-tba">
                                 <connections>
                                     <action selector="doneTouchInside:" destination="-1" id="Nto-1b-yrk"/>
                                 </connections>

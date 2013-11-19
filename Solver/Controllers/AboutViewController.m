@@ -19,6 +19,7 @@
     [super viewDidLoad];
     
     self.title = @"About";
+    self.navigationController.navigationBar.translucent = NO;
 }
 
 @end

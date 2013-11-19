@@ -17,6 +17,10 @@ NSString * const QUESTION_ABOUT_CAR = @"Who will drive a car?";
 NSString * const QUESTION_ABOUT_LUNCH = @"Who has to pay for lunch?";
 NSString * const QUESTION_ABOUT_LEAD = @"Who is going to lead?";
 NSString * const QUESTION_ABOUT_SOMETHING_LONG = @"Some very long question about something very important!";
+NSString * const DID_APPLICATION_ALREADY_RUN_KEY = @"Brand new application start";
+NSString * const NEW_APPLICATION_START_KEY = @"New application start";
+NSString * const SHOULD_START_WITH_QUESTION_SCREEN_KEY = @"Should Start With Question Screen";
+NSString * const SHOULD_REMOVE_WINNING_PHOTO_KEY = @"Should Remove Winning Photo";
 
 
 #pragma mark - Notification Settings

@@ -26,7 +26,7 @@
                                     <action selector="cancelTouchInside:" destination="-1" id="PRg-IZ-wIi"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="kpD-3L-b3S">
+                            <barButtonItem key="rightBarButtonItem" systemItem="add" id="kpD-3L-b3S">
                                 <connections>
                                     <action selector="addTouchInside:" destination="-1" id="d1G-Tm-eFc"/>
                                 </connections>

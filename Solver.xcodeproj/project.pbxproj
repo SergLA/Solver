@@ -55,6 +55,8 @@
 		24BD9098183792AD00F0AB18 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BD9096183792AD00F0AB18 /* AboutViewController.m */; };
 		24BD909A183792BC00F0AB18 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BD9099183792BC00F0AB18 /* AboutViewController.xib */; };
 		24BD909B183792BC00F0AB18 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BD9099183792BC00F0AB18 /* AboutViewController.xib */; };
+		24BD909E1839135600F0AB18 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BD909D1839135600F0AB18 /* Settings.m */; };
+		24BD909F1839135600F0AB18 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BD909D1839135600F0AB18 /* Settings.m */; };
 		24FF19AB1832E9B300ABDBC4 /* AddQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FF19AA1832E9B300ABDBC4 /* AddQuestionViewController.m */; };
 		24FF19AD1832E9BF00ABDBC4 /* AddQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FF19AC1832E9BF00ABDBC4 /* AddQuestionViewController.xib */; };
 		24FF19B11832F99800ABDBC4 /* PhotoSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FF19B01832F99800ABDBC4 /* PhotoSlider.m */; };
@@ -137,6 +139,8 @@
 		24BD9095183792AD00F0AB18 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		24BD9096183792AD00F0AB18 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		24BD9099183792BC00F0AB18 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		24BD909C1839135600F0AB18 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		24BD909D1839135600F0AB18 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		24FF19A91832E9B300ABDBC4 /* AddQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddQuestionViewController.h; sourceTree = "<group>"; };
 		24FF19AA1832E9B300ABDBC4 /* AddQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddQuestionViewController.m; sourceTree = "<group>"; };
 		24FF19AC1832E9BF00ABDBC4 /* AddQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddQuestionViewController.xib; sourceTree = "<group>"; };
@@ -221,6 +225,8 @@
 				24768EA6183296C80090570C /* XIBs */,
 				24768EA7183298580090570C /* Resources */,
 				24768E7D183293D70090570C /* Supporting Files */,
+				24BD909C1839135600F0AB18 /* Settings.h */,
+				24BD909D1839135600F0AB18 /* Settings.m */,
 				2495524D1832BDED005291BA /* Constants.h */,
 				244E8AD01832CF3C000E9C42 /* Constants.m */,
 				24768E85183293D70090570C /* AppDelegate.h */,
@@ -504,6 +510,7 @@
 				24FF19B81832FC4900ABDBC4 /* PhotosDataSource.m in Sources */,
 				24768E83183293D70090570C /* main.m in Sources */,
 				24FF19B41832FA0600ABDBC4 /* ExtendedPickerView.m in Sources */,
+				24BD909E1839135600F0AB18 /* Settings.m in Sources */,
 				24BD9097183792AD00F0AB18 /* AboutViewController.m in Sources */,
 				2495524C1832BA2B005291BA /* QuestionsDataSource.m in Sources */,
 				24FF19B11832F99800ABDBC4 /* PhotoSlider.m in Sources */,
@@ -522,6 +529,7 @@
 			files = (
 				244E8ACB1832C74B000E9C42 /* QuestionsViewController.m in Sources */,
 				24FF19CF183309E300ABDBC4 /* UIImage+RoundedCorner.m in Sources */,
+				24BD909F1839135600F0AB18 /* Settings.m in Sources */,
 				24768E9C183293D70090570C /* SolverTests.m in Sources */,
 				24768EAB183298BE0090570C /* HomeViewController.m in Sources */,
 				24FF19B91832FC4900ABDBC4 /* PhotosDataSource.m in Sources */,

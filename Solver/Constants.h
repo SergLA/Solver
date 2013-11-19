@@ -16,9 +16,14 @@ extern NSString * const QUESTION_ABOUT_CAR;
 extern NSString * const QUESTION_ABOUT_LUNCH;
 extern NSString * const QUESTION_ABOUT_LEAD;
 extern NSString * const QUESTION_ABOUT_SOMETHING_LONG;
+extern NSString * const DID_APPLICATION_ALREADY_RUN_KEY;
+extern NSString * const NEW_APPLICATION_START_KEY;
+extern NSString * const SHOULD_START_WITH_QUESTION_SCREEN_KEY;
+extern NSString * const SHOULD_REMOVE_WINNING_PHOTO_KEY;
 
 
 #pragma mark - Notification Settings
+
 extern NSString * const PHOTOS_UPDATE_NOTIFICATION;
 extern NSString * const UPDATE_KIND_KEY;
 extern NSString * const ADD_PHOTO_UPDATE;

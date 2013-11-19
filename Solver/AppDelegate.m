@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "HomeViewController.h"
 #import "QuestionsDataSource.h"
+#import "Settings.h"
 
 
 @implementation AppDelegate
@@ -35,6 +36,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
+    [Settings defaultSettings].newApplicationStart = YES;
     [[QuestionsDataSource defaultDataSource] saveQuestions];
 }
 

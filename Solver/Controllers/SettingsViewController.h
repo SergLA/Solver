@@ -10,7 +10,13 @@
 
 @interface SettingsViewController : UIViewController
 
-- (IBAction)doneTouchInside:(id)sender;
+@property (weak, nonatomic) IBOutlet UISwitch *startWithQuestionPageSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *removeWinningPhotoSwitch;
+
+- (IBAction)startWithQuestionPageSwitchValueChanged:(UISwitch*)sender;
+- (IBAction)removeWinningPhotoSwitchValueChanged:(UISwitch*)sender;
+
 - (IBAction)aboutTouchInside:(id)sender;
+- (IBAction)clearTouchInside:(id)sender;
 
 @end
