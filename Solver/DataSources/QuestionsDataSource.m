@@ -106,7 +106,7 @@ static QuestionsDataSource *dataSource = nil;
     }
 }
 
-- (void)removeQuestionFromIndex:(int)index
+- (void)removeQuestionFromIndex:(NSInteger)index
 {
     [self.questions removeObjectAtIndex:index];
     
@@ -127,7 +127,7 @@ static QuestionsDataSource *dataSource = nil;
     self.selectedIndex = self.questions.count - 1;
 }
 
-- (void)moveQuestionFromIndex:(int)from ToIndex:(int)to
+- (void)moveQuestionFromIndex:(NSInteger)from ToIndex:(NSInteger)to
 {
     if (from == to)
     {

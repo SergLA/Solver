@@ -58,7 +58,7 @@
 
 - (void)photosUpdated:(NSNotification *)notification
 {
-    int count = [[[PhotosDataSource defaultDataSource] allPhotos] count];
+    NSInteger count = [[[PhotosDataSource defaultDataSource] allPhotos] count];
     
     NSString *updateKind = [[notification userInfo] objectForKey:UPDATE_KIND_KEY];
 

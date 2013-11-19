@@ -88,7 +88,7 @@ UIImage* randomImageWithNumber(NSInteger number)
         CGContextDrawPath(context, kCGPathFillStroke);
     }
     
-    NSString *string = [NSString stringWithFormat:@"%d", number];
+    NSString *string = [NSString stringWithFormat:@"%ld", (long)number];
     CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
     CGRect textRect = imageRect;
     textRect.origin.y = (number >= 100) ? 35 : 10;

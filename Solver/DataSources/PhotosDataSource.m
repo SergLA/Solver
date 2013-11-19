@@ -75,7 +75,7 @@ static PhotosDataSource *dataSource = nil;
     return self.photos;
 }
 
-- (UIImage *)photoAtIndex:(int)index
+- (UIImage *)photoAtIndex:(NSInteger)index
 {
     if ((index >= 0) && (index < self.photos.count))
     {
@@ -85,7 +85,7 @@ static PhotosDataSource *dataSource = nil;
     return nil;
 }
 
-- (void)removePhotoFromIndex:(int)index
+- (void)removePhotoFromIndex:(NSInteger)index
 {
     if ((index >= 0) && (index < self.photos.count))
     {

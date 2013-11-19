@@ -17,10 +17,10 @@
 
 - (void)selectQuestionAtIndex:(NSInteger)index;
 
-- (void)removeQuestionFromIndex:(int)index;
+- (void)removeQuestionFromIndex:(NSInteger)index;
 - (void)addQuestion:(NSString *)question;
 - (void)addQuestionAndSelect:(NSString *)question;
-- (void)moveQuestionFromIndex:(int)from ToIndex:(int)to;
+- (void)moveQuestionFromIndex:(NSInteger)from ToIndex:(NSInteger)to;
 
 - (void)saveQuestions;
 

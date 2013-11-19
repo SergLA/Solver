@@ -13,8 +13,8 @@
 
 - (NSArray *)allPhotos;
 
-- (UIImage *)photoAtIndex:(int)index;
-- (void)removePhotoFromIndex:(int)index;
+- (UIImage *)photoAtIndex:(NSInteger)index;
+- (void)removePhotoFromIndex:(NSInteger)index;
 - (void)addPhoto:(UIImage *)photo;
 - (void)clearPhotos;
 
