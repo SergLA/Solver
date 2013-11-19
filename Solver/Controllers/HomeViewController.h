@@ -11,6 +11,8 @@
 @interface HomeViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIView *ballViewPlaceholder;
+@property (weak, nonatomic) IBOutlet UIImageView *ballImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *winningPhotoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 
 - (IBAction)addPhotoTouchInside:(id)sender;

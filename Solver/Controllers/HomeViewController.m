@@ -18,10 +18,19 @@
 #import "SettingsViewController.h"
 
 
+typedef enum
+{
+    ViewStateReady,        // View ready for shaking - no need to handle touches
+    ViewStatePhotoWinned,  // View shows winning photo insde ball
+    ViewStateShowingPhoto, // View shows winning photo on top of the screen
+} ViewState;
+
+
 @interface HomeViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
+@property (nonatomic, assign) ViewState state;
 @property (nonatomic, weak) PhotoSlider *photoSlider;
-@property (nonatomic, assign) NSInteger selectedPhotoID;
+@property (nonatomic, assign) NSInteger winningPhotoID;
 
 @end
 
@@ -43,6 +52,12 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(photosUpdated:)
                                                  name:PHOTOS_UPDATE_NOTIFICATION object:nil];
+    
+//    self.tapOnWinningImage = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapOnWinningImage)];
+//    self.tapOnExpandedImage = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapOnExpandedImage)];
+//    
+//    [self.ballImageView addGestureRecognizer:self.tapOnWinningImage];
+//    [self.winningPhotoImageView addGestureRecognizer:self.tapOnExpandedImage];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -50,6 +65,8 @@
     [super viewWillAppear:animated];
     
     self.questionLabel.text = [[QuestionsDataSource defaultDataSource] selectedQuestion];
+    self.winningPhotoImageView.image = nil;
+    [self.ballViewPlaceholder sendSubviewToBack:self.winningPhotoImageView];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -117,6 +134,76 @@
     {
         [self setupPhotoSlider];
     }
+}
+
+- (void)setWinningPhoto
+{
+    self.winningPhotoImageView.image = [[PhotosDataSource defaultDataSource] photoAtIndex:self.winningPhotoID];
+    
+    self.state = ViewStatePhotoWinned;
+    
+    if ([Settings defaultSettings].shouldRemoveWinningPhoto)
+    {
+        [[PhotosDataSource defaultDataSource] removePhotoFromIndex:self.winningPhotoID];
+    }
+}
+
+- (void)didTapOnWinningImage
+{
+    if (nil == self.winningPhotoImageView.image)
+    {
+        return;
+    }
+    
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         CGRect rect = CGRectMake(110, 110, 120, 120);
+                         self.winningPhotoImageView.frame = rect;
+                     }
+                     completion:^(BOOL finished) {
+                         [self.ballViewPlaceholder sendSubviewToBack:self.ballImageView];
+                         [UIView animateWithDuration:0.5
+                                          animations:^{
+                                              CGRect rect = CGRectMake(30, 30, 280, 280);
+                                              self.winningPhotoImageView.frame = rect;
+                                          }
+                                          completion:^(BOOL finished) {
+                                              self.state = ViewStateShowingPhoto;
+                                          }];
+                     }];
+}
+
+- (void)didTapOnExpandedImage
+{
+    if (nil == self.winningPhotoImageView.image)
+    {
+        return;
+    }
+    
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         CGRect rect = CGRectMake(25, 25, 290, 290);
+                         self.winningPhotoImageView.frame = rect;
+                     }
+                     completion:^(BOOL finished) {
+                         [self.ballViewPlaceholder sendSubviewToBack:self.ballImageView];
+                         [UIView animateWithDuration:0.3
+                                          animations:^{
+                                              CGRect rect = CGRectMake(165, 165, 10, 10);
+                                              self.winningPhotoImageView.frame = rect;
+                                              self.winningPhotoImageView.alpha = 0.2;
+                                          }
+                                          completion:^(BOOL finished) {
+                                              self.winningPhotoImageView.alpha = 1.0;
+                                              self.winningPhotoImageView.image = nil;
+                                              self.winningPhotoImageView.frame = CGRectMake(85, 85, 170, 170);
+                                              
+                                              [self.ballViewPlaceholder sendSubviewToBack:self.winningPhotoImageView];
+                                              
+                                              self.state = ViewStateReady;
+                                          }];
+                     }];
+    
 }
 
 
@@ -188,7 +275,7 @@
 }
 
 
-#pragma mark - Shacking handling
+#pragma mark - UIResponder methods
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
@@ -206,7 +293,31 @@
             return;
         }
         
-        self.selectedPhotoID = rand() % photosCount;
+        self.winningPhotoID = rand() % photosCount;
+        
+        [self setWinningPhoto];
+    }
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    switch (self.state)
+    {
+        case ViewStateReady:
+            // Do nothing
+            break;
+            
+        case ViewStatePhotoWinned:
+            [self didTapOnWinningImage];
+            break;
+            
+        case ViewStateShowingPhoto:
+            [self didTapOnExpandedImage];
+            break;
+            
+        default:
+            NSLog(@"Something wrong with HomeView state!");
+            break;
     }
 }
 
