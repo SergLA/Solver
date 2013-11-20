@@ -88,6 +88,7 @@ UIImage* randomImageWithNumber(NSInteger number)
         CGContextDrawPath(context, kCGPathFillStroke);
     }
     
+    // Text stuff
     NSString *string = [NSString stringWithFormat:@"%ld", (long)number];
     CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
     CGRect textRect = imageRect;
@@ -97,10 +98,47 @@ UIImage* randomImageWithNumber(NSInteger number)
          lineBreakMode:NSLineBreakByClipping
              alignment:NSTextAlignmentCenter];
     
+    // Generate image
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     return image;
 }
 
+UIImage* defaultUserpicImageWithString(NSString *string)
+{
+    CGRect imageRect = CGRectMake(0.0f, 0.0f, 170.0f, 170.0f);
+    UIGraphicsBeginImageContext(imageRect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    // Default image
+    // Little trick: by default we draw upsidedown, so we have to
+    // turn context (invert vertically), draw image and restore
+    // previous content's state.
+    CGContextSaveGState(context);
+    CGContextScaleCTM(context, 1, -1);
+    CGContextTranslateCTM(context, 0, -imageRect.size.height);
+    UIImage *tmpImage = [UIImage imageNamed:@"blank"];
+    CGContextDrawImage(context, imageRect, tmpImage.CGImage);
+    CGContextRestoreGState(context);
+    
+    // Text stuff
+    CGSize textSize = [string sizeWithFont:[UIFont systemFontOfSize:36] constrainedToSize:imageRect.size lineBreakMode:NSLineBreakByWordWrapping];
+    CGRect textRect = CGRectZero;
+    textRect.origin.x = (imageRect.size.width - textSize.width) / 2.0;
+    textRect.origin.y = imageRect.size.height - textSize.height;
+    textRect.size = textSize;
+    
+    CGContextSetFillColorWithColor(context, [UIColor lightGrayColor].CGColor);
+    [string drawInRect:textRect
+              withFont:[UIFont systemFontOfSize:36]
+         lineBreakMode:NSLineBreakByWordWrapping
+             alignment:NSTextAlignmentCenter];
+    
+    // Generate image
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
 

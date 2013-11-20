@@ -367,7 +367,7 @@ typedef enum
         UIImage *photo = contact.thumbnail;
         if (nil == photo)
         {
-            //photo = randomImageWithString(contact.name);
+            photo = defaultUserpicImageWithString(contact.name);
         }
         
         [[PhotosDataSource defaultDataSource] addPhoto:photo];
