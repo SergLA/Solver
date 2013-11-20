@@ -18,6 +18,8 @@
 #import "QuestionsViewController.h"
 #import "SettingsViewController.h"
 #import "ELCImagePickerController.h"
+#import "TKPeoplePickerController.h"
+#import "TKContact.h"
 
 
 typedef enum
@@ -28,7 +30,8 @@ typedef enum
 } ViewState;
 
 
-@interface HomeViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, ELCImagePickerControllerDelegate>
+@interface HomeViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate,
+    ELCImagePickerControllerDelegate, TKPeoplePickerControllerDelegate>
 
 @property (nonatomic, assign) ViewState state;
 @property (nonatomic, weak) PhotoSlider *photoSlider;
@@ -280,6 +283,11 @@ typedef enum
 
 - (IBAction)addPhotoFromContactsTouchInside:(id)sender
 {
+    TKPeoplePickerController *peoplePicker = [[TKPeoplePickerController alloc] initPeoplePicker];
+    peoplePicker.actionDelegate = self;
+    peoplePicker.modalPresentationStyle = UIModalPresentationFullScreen;
+    
+    [self presentViewController:peoplePicker animated:YES completion:nil];
 }
 
 - (IBAction)deletePhotosTouchInside:(id)sender
@@ -309,14 +317,14 @@ typedef enum
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+    [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
+    
     UIImage *photo = [info objectForKey:UIImagePickerControllerOriginalImage];
     photo = [photo resizedImageWithContentMode:UIViewContentModeScaleAspectFit
                                         bounds:CGSizeMake(170, 170)
                           interpolationQuality:kCGInterpolationHigh];
 	
     [[PhotosDataSource defaultDataSource] addPhoto:photo];
-    
-    [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
@@ -343,6 +351,30 @@ typedef enum
 }
 
 - (void)elcImagePickerControllerDidCancel:(ELCImagePickerController *)picker
+{
+    [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+#pragma mark - TKPeoplePickerControllerDelegate
+
+- (void)tkPeoplePickerController:(TKPeoplePickerController*)picker didFinishPickingDataWithInfo:(NSArray*)contacts
+{
+    [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
+    
+    for (TKContact *contact in contacts)
+    {
+        UIImage *photo = contact.thumbnail;
+        if (nil == photo)
+        {
+            //photo = randomImageWithString(contact.name);
+        }
+        
+        [[PhotosDataSource defaultDataSource] addPhoto:photo];
+    }
+}
+
+- (void)tkPeoplePickerControllerDidCancel:(TKPeoplePickerController*)picker
 {
     [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
 }

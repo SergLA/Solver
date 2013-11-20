@@ -7,6 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		243E8D9D183C2D3300772002 /* NSString+TKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E8D81183C2D3300772002 /* NSString+TKUtilities.m */; };
+		243E8D9E183C2D3300772002 /* NSString+TKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E8D81183C2D3300772002 /* NSString+TKUtilities.m */; };
+		243E8D9F183C2D3300772002 /* UIImage+TKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E8D83183C2D3300772002 /* UIImage+TKUtilities.m */; };
+		243E8DA0183C2D3300772002 /* UIImage+TKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E8D83183C2D3300772002 /* UIImage+TKUtilities.m */; };
+		243E8DA1183C2D3300772002 /* TKContactsMultiPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E8D86183C2D3300772002 /* TKContactsMultiPickerController.m */; };
+		243E8DA2183C2D3300772002 /* TKContactsMultiPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E8D86183C2D3300772002 /* TKContactsMultiPickerController.m */; };
+		243E8DA3183C2D3300772002 /* TKGroupPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E8D88183C2D3300772002 /* TKGroupPickerController.m */; };
+		243E8DA4183C2D3300772002 /* TKGroupPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E8D88183C2D3300772002 /* TKGroupPickerController.m */; };
+		243E8DA5183C2D3300772002 /* TKNoContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E8D8A183C2D3300772002 /* TKNoContactViewController.m */; };
+		243E8DA6183C2D3300772002 /* TKNoContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E8D8A183C2D3300772002 /* TKNoContactViewController.m */; };
+		243E8DA7183C2D3300772002 /* TKPeoplePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E8D8C183C2D3300772002 /* TKPeoplePickerController.m */; };
+		243E8DA8183C2D3300772002 /* TKPeoplePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E8D8C183C2D3300772002 /* TKPeoplePickerController.m */; };
+		243E8DA9183C2D3300772002 /* TKContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E8D8F183C2D3300772002 /* TKContact.m */; };
+		243E8DAA183C2D3300772002 /* TKContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E8D8F183C2D3300772002 /* TKContact.m */; };
+		243E8DAB183C2D3300772002 /* TKGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E8D91183C2D3300772002 /* TKGroup.m */; };
+		243E8DAC183C2D3300772002 /* TKGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E8D91183C2D3300772002 /* TKGroup.m */; };
+		243E8DAD183C2D3300772002 /* blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 243E8D93183C2D3300772002 /* blank.png */; };
+		243E8DAE183C2D3300772002 /* blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 243E8D93183C2D3300772002 /* blank.png */; };
+		243E8DAF183C2D3300772002 /* blank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 243E8D94183C2D3300772002 /* blank@2x.png */; };
+		243E8DB0183C2D3300772002 /* blank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 243E8D94183C2D3300772002 /* blank@2x.png */; };
+		243E8DB1183C2D3300772002 /* checkBox.png in Resources */ = {isa = PBXBuildFile; fileRef = 243E8D95183C2D3300772002 /* checkBox.png */; };
+		243E8DB2183C2D3300772002 /* checkBox.png in Resources */ = {isa = PBXBuildFile; fileRef = 243E8D95183C2D3300772002 /* checkBox.png */; };
+		243E8DB3183C2D3300772002 /* checkBox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 243E8D96183C2D3300772002 /* checkBox@2x.png */; };
+		243E8DB4183C2D3300772002 /* checkBox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 243E8D96183C2D3300772002 /* checkBox@2x.png */; };
+		243E8DB5183C2D3300772002 /* uncheckBox.png in Resources */ = {isa = PBXBuildFile; fileRef = 243E8D97183C2D3300772002 /* uncheckBox.png */; };
+		243E8DB6183C2D3300772002 /* uncheckBox.png in Resources */ = {isa = PBXBuildFile; fileRef = 243E8D97183C2D3300772002 /* uncheckBox.png */; };
+		243E8DB7183C2D3300772002 /* uncheckBox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 243E8D98183C2D3300772002 /* uncheckBox@2x.png */; };
+		243E8DB8183C2D3300772002 /* uncheckBox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 243E8D98183C2D3300772002 /* uncheckBox@2x.png */; };
+		243E8DB9183C2D3300772002 /* TKContactsMultiPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243E8D9A183C2D3300772002 /* TKContactsMultiPickerController.xib */; };
+		243E8DBA183C2D3300772002 /* TKContactsMultiPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243E8D9A183C2D3300772002 /* TKContactsMultiPickerController.xib */; };
+		243E8DBB183C2D3300772002 /* TKGroupPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243E8D9B183C2D3300772002 /* TKGroupPickerController.xib */; };
+		243E8DBC183C2D3300772002 /* TKGroupPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243E8D9B183C2D3300772002 /* TKGroupPickerController.xib */; };
+		243E8DBD183C2D3300772002 /* TKNoContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243E8D9C183C2D3300772002 /* TKNoContactViewController.xib */; };
+		243E8DBE183C2D3300772002 /* TKNoContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243E8D9C183C2D3300772002 /* TKNoContactViewController.xib */; };
+		243E8DC0183C2F0900772002 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 243E8DBF183C2F0900772002 /* AddressBook.framework */; };
+		243E8DC2183C2F0D00772002 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 243E8DC1183C2F0D00772002 /* AddressBookUI.framework */; };
 		244E8ACA1832C74B000E9C42 /* QuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 244E8AC91832C74B000E9C42 /* QuestionsViewController.m */; };
 		244E8ACB1832C74B000E9C42 /* QuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 244E8AC91832C74B000E9C42 /* QuestionsViewController.m */; };
 		244E8ACD1832C763000E9C42 /* QuestionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244E8ACC1832C763000E9C42 /* QuestionsViewController.xib */; };
@@ -105,6 +141,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		243E8D80183C2D3300772002 /* NSString+TKUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TKUtilities.h"; sourceTree = "<group>"; };
+		243E8D81183C2D3300772002 /* NSString+TKUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TKUtilities.m"; sourceTree = "<group>"; };
+		243E8D82183C2D3300772002 /* UIImage+TKUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TKUtilities.h"; sourceTree = "<group>"; };
+		243E8D83183C2D3300772002 /* UIImage+TKUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TKUtilities.m"; sourceTree = "<group>"; };
+		243E8D85183C2D3300772002 /* TKContactsMultiPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKContactsMultiPickerController.h; sourceTree = "<group>"; };
+		243E8D86183C2D3300772002 /* TKContactsMultiPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKContactsMultiPickerController.m; sourceTree = "<group>"; };
+		243E8D87183C2D3300772002 /* TKGroupPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKGroupPickerController.h; sourceTree = "<group>"; };
+		243E8D88183C2D3300772002 /* TKGroupPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKGroupPickerController.m; sourceTree = "<group>"; };
+		243E8D89183C2D3300772002 /* TKNoContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKNoContactViewController.h; sourceTree = "<group>"; };
+		243E8D8A183C2D3300772002 /* TKNoContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKNoContactViewController.m; sourceTree = "<group>"; };
+		243E8D8B183C2D3300772002 /* TKPeoplePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKPeoplePickerController.h; sourceTree = "<group>"; };
+		243E8D8C183C2D3300772002 /* TKPeoplePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKPeoplePickerController.m; sourceTree = "<group>"; };
+		243E8D8E183C2D3300772002 /* TKContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKContact.h; sourceTree = "<group>"; };
+		243E8D8F183C2D3300772002 /* TKContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKContact.m; sourceTree = "<group>"; };
+		243E8D90183C2D3300772002 /* TKGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKGroup.h; sourceTree = "<group>"; };
+		243E8D91183C2D3300772002 /* TKGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKGroup.m; sourceTree = "<group>"; };
+		243E8D93183C2D3300772002 /* blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blank.png; sourceTree = "<group>"; };
+		243E8D94183C2D3300772002 /* blank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blank@2x.png"; sourceTree = "<group>"; };
+		243E8D95183C2D3300772002 /* checkBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkBox.png; sourceTree = "<group>"; };
+		243E8D96183C2D3300772002 /* checkBox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkBox@2x.png"; sourceTree = "<group>"; };
+		243E8D97183C2D3300772002 /* uncheckBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uncheckBox.png; sourceTree = "<group>"; };
+		243E8D98183C2D3300772002 /* uncheckBox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uncheckBox@2x.png"; sourceTree = "<group>"; };
+		243E8D9A183C2D3300772002 /* TKContactsMultiPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKContactsMultiPickerController.xib; sourceTree = "<group>"; };
+		243E8D9B183C2D3300772002 /* TKGroupPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKGroupPickerController.xib; sourceTree = "<group>"; };
+		243E8D9C183C2D3300772002 /* TKNoContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKNoContactViewController.xib; sourceTree = "<group>"; };
+		243E8DBF183C2F0900772002 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		243E8DC1183C2F0D00772002 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		244E8AC81832C74B000E9C42 /* QuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsViewController.h; sourceTree = "<group>"; };
 		244E8AC91832C74B000E9C42 /* QuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsViewController.m; sourceTree = "<group>"; };
 		244E8ACC1832C763000E9C42 /* QuestionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionsViewController.xib; sourceTree = "<group>"; };
@@ -198,6 +261,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				243E8DC2183C2F0D00772002 /* AddressBookUI.framework in Frameworks */,
+				243E8DC0183C2F0900772002 /* AddressBook.framework in Frameworks */,
 				24D900EC183C091C00BBC069 /* QuartzCore.framework in Frameworks */,
 				24D900EA183C002E00BBC069 /* AssetsLibrary.framework in Frameworks */,
 				24768E79183293D70090570C /* CoreGraphics.framework in Frameworks */,
@@ -219,6 +284,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		243E8D7E183C2D3300772002 /* TKContactPicker */ = {
+			isa = PBXGroup;
+			children = (
+				243E8D7F183C2D3300772002 /* Additions */,
+				243E8D84183C2D3300772002 /* Controllers */,
+				243E8D8D183C2D3300772002 /* Models */,
+				243E8D92183C2D3300772002 /* Resources */,
+				243E8D99183C2D3300772002 /* Xibs */,
+			);
+			path = TKContactPicker;
+			sourceTree = "<group>";
+		};
+		243E8D7F183C2D3300772002 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				243E8D80183C2D3300772002 /* NSString+TKUtilities.h */,
+				243E8D81183C2D3300772002 /* NSString+TKUtilities.m */,
+				243E8D82183C2D3300772002 /* UIImage+TKUtilities.h */,
+				243E8D83183C2D3300772002 /* UIImage+TKUtilities.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		243E8D84183C2D3300772002 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				243E8D85183C2D3300772002 /* TKContactsMultiPickerController.h */,
+				243E8D86183C2D3300772002 /* TKContactsMultiPickerController.m */,
+				243E8D87183C2D3300772002 /* TKGroupPickerController.h */,
+				243E8D88183C2D3300772002 /* TKGroupPickerController.m */,
+				243E8D89183C2D3300772002 /* TKNoContactViewController.h */,
+				243E8D8A183C2D3300772002 /* TKNoContactViewController.m */,
+				243E8D8B183C2D3300772002 /* TKPeoplePickerController.h */,
+				243E8D8C183C2D3300772002 /* TKPeoplePickerController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		243E8D8D183C2D3300772002 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				243E8D8E183C2D3300772002 /* TKContact.h */,
+				243E8D8F183C2D3300772002 /* TKContact.m */,
+				243E8D90183C2D3300772002 /* TKGroup.h */,
+				243E8D91183C2D3300772002 /* TKGroup.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		243E8D92183C2D3300772002 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				243E8D93183C2D3300772002 /* blank.png */,
+				243E8D94183C2D3300772002 /* blank@2x.png */,
+				243E8D95183C2D3300772002 /* checkBox.png */,
+				243E8D96183C2D3300772002 /* checkBox@2x.png */,
+				243E8D97183C2D3300772002 /* uncheckBox.png */,
+				243E8D98183C2D3300772002 /* uncheckBox@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		243E8D99183C2D3300772002 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				243E8D9A183C2D3300772002 /* TKContactsMultiPickerController.xib */,
+				243E8D9B183C2D3300772002 /* TKGroupPickerController.xib */,
+				243E8D9C183C2D3300772002 /* TKNoContactViewController.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
 		24768E6A183293D70090570C = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +379,8 @@
 		24768E75183293D70090570C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				243E8DC1183C2F0D00772002 /* AddressBookUI.framework */,
+				243E8DBF183C2F0900772002 /* AddressBook.framework */,
 				24D900EB183C091C00BBC069 /* QuartzCore.framework */,
 				24D900E9183C002E00BBC069 /* AssetsLibrary.framework */,
 				24768E76183293D70090570C /* Foundation.framework */,
@@ -417,6 +556,7 @@
 		24FF19AE1832F97800ABDBC4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				243E8D7E183C2D3300772002 /* TKContactPicker */,
 				24D900C2183BF83100BBC069 /* ELCImagePicker */,
 				24FF19C8183309E300ABDBC4 /* UIImage+Alpha.h */,
 				24FF19C9183309E300ABDBC4 /* UIImage+Alpha.m */,
@@ -515,8 +655,10 @@
 				24D900E7183BF83100BBC069 /* Overlay@2x.png in Resources */,
 				2495523B1832AE48005291BA /* add_photo.png in Resources */,
 				249552301832A784005291BA /* Icon-Small.png in Resources */,
+				243E8DAD183C2D3300772002 /* blank.png in Resources */,
 				249552471832B8CF005291BA /* Ball.png in Resources */,
 				249552381832AC23005291BA /* trash@2x.png in Resources */,
+				243E8DB7183C2D3300772002 /* uncheckBox@2x.png in Resources */,
 				249552441832B0BE005291BA /* add_photo_camera_roll@2x.png in Resources */,
 				2495522F1832A784005291BA /* Icon-80.png in Resources */,
 				244E8ACD1832C763000E9C42 /* QuestionsViewController.xib in Resources */,
@@ -526,17 +668,24 @@
 				249552421832B0BE005291BA /* add_contact@2x.png in Resources */,
 				249552411832B0BE005291BA /* add_contact.png in Resources */,
 				249552481832B8CF005291BA /* Ball@2x.png in Resources */,
+				243E8DAF183C2D3300772002 /* blank@2x.png in Resources */,
 				24768E81183293D70090570C /* InfoPlist.strings in Resources */,
+				243E8DBD183C2D3300772002 /* TKNoContactViewController.xib in Resources */,
 				24D900E3183BF83100BBC069 /* ELCAssetTablePicker.xib in Resources */,
+				243E8DB9183C2D3300772002 /* TKContactsMultiPickerController.xib in Resources */,
+				243E8DB5183C2D3300772002 /* uncheckBox.png in Resources */,
 				249552311832A784005291BA /* Icon-Small@2x.png in Resources */,
 				249552431832B0BE005291BA /* add_photo_camera_roll.png in Resources */,
 				249552331832A784005291BA /* Icon@2x.png in Resources */,
+				243E8DB1183C2D3300772002 /* checkBox.png in Resources */,
 				24BD90931837866100F0AB18 /* SettingsViewController.xib in Resources */,
 				24768EAD183298EF0090570C /* HomeViewController.xib in Resources */,
 				2495523C1832AE48005291BA /* add_photo@2x.png in Resources */,
+				243E8DB3183C2D3300772002 /* checkBox@2x.png in Resources */,
 				24BD909A183792BC00F0AB18 /* AboutViewController.xib in Resources */,
 				2495522D1832A784005291BA /* Default@2x.png in Resources */,
 				2495522B1832A784005291BA /* Default-568h@2x.png in Resources */,
+				243E8DBB183C2D3300772002 /* TKGroupPickerController.xib in Resources */,
 				24D900DF183BF83100BBC069 /* ELCAlbumPickerController.xib in Resources */,
 				2495522E1832A784005291BA /* Icon-120.png in Resources */,
 				2495522C1832A784005291BA /* Default.png in Resources */,
@@ -547,15 +696,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				243E8DB4183C2D3300772002 /* checkBox@2x.png in Resources */,
 				24BD909B183792BC00F0AB18 /* AboutViewController.xib in Resources */,
 				24D900E4183BF83100BBC069 /* ELCAssetTablePicker.xib in Resources */,
+				243E8DB2183C2D3300772002 /* checkBox.png in Resources */,
 				24BD90941837866100F0AB18 /* SettingsViewController.xib in Resources */,
+				243E8DBE183C2D3300772002 /* TKNoContactViewController.xib in Resources */,
 				24D900E6183BF83100BBC069 /* Overlay.png in Resources */,
+				243E8DAE183C2D3300772002 /* blank.png in Resources */,
+				243E8DBA183C2D3300772002 /* TKContactsMultiPickerController.xib in Resources */,
 				24D900E8183BF83100BBC069 /* Overlay@2x.png in Resources */,
+				243E8DB8183C2D3300772002 /* uncheckBox@2x.png in Resources */,
 				24D900E0183BF83100BBC069 /* ELCAlbumPickerController.xib in Resources */,
 				24768E9A183293D70090570C /* InfoPlist.strings in Resources */,
 				24D900E2183BF83100BBC069 /* ELCAssetPicker.xib in Resources */,
+				243E8DB0183C2D3300772002 /* blank@2x.png in Resources */,
 				24768EAE183298EF0090570C /* HomeViewController.xib in Resources */,
+				243E8DB6183C2D3300772002 /* uncheckBox.png in Resources */,
+				243E8DBC183C2D3300772002 /* TKGroupPickerController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,22 +729,30 @@
 				244E8ACA1832C74B000E9C42 /* QuestionsViewController.m in Sources */,
 				24FF19AB1832E9B300ABDBC4 /* AddQuestionViewController.m in Sources */,
 				24D900D9183BF83100BBC069 /* ELCAssetCell.m in Sources */,
+				243E8DA1183C2D3300772002 /* TKContactsMultiPickerController.m in Sources */,
 				24D900DD183BF83100BBC069 /* ELCImagePickerController.m in Sources */,
+				243E8D9F183C2D3300772002 /* UIImage+TKUtilities.m in Sources */,
 				24D900D5183BF83100BBC069 /* ELCAlbumPickerController.m in Sources */,
 				24FF19B81832FC4900ABDBC4 /* PhotosDataSource.m in Sources */,
 				24768E83183293D70090570C /* main.m in Sources */,
 				24FF19B41832FA0600ABDBC4 /* ExtendedPickerView.m in Sources */,
 				24BD909E1839135600F0AB18 /* Settings.m in Sources */,
 				24BD9097183792AD00F0AB18 /* AboutViewController.m in Sources */,
+				243E8DAB183C2D3300772002 /* TKGroup.m in Sources */,
+				243E8DA7183C2D3300772002 /* TKPeoplePickerController.m in Sources */,
 				2495524C1832BA2B005291BA /* QuestionsDataSource.m in Sources */,
 				24FF19B11832F99800ABDBC4 /* PhotoSlider.m in Sources */,
+				243E8DA9183C2D3300772002 /* TKContact.m in Sources */,
 				24FF19CE183309E300ABDBC4 /* UIImage+RoundedCorner.m in Sources */,
 				24D900DB183BF83100BBC069 /* ELCAssetTablePicker.m in Sources */,
 				24FF19CC183309E300ABDBC4 /* UIImage+Alpha.m in Sources */,
+				243E8D9D183C2D3300772002 /* NSString+TKUtilities.m in Sources */,
 				24FF19C6183309B800ABDBC4 /* UIImage+Resize.m in Sources */,
 				24768EAA183298BE0090570C /* HomeViewController.m in Sources */,
 				244E8AD11832CF3C000E9C42 /* Constants.m in Sources */,
 				24BD90901837864D00F0AB18 /* SettingsViewController.m in Sources */,
+				243E8DA3183C2D3300772002 /* TKGroupPickerController.m in Sources */,
+				243E8DA5183C2D3300772002 /* TKNoContactViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,18 +765,26 @@
 				24FF19CF183309E300ABDBC4 /* UIImage+RoundedCorner.m in Sources */,
 				24BD909F1839135600F0AB18 /* Settings.m in Sources */,
 				24768E9C183293D70090570C /* SolverTests.m in Sources */,
+				243E8DAC183C2D3300772002 /* TKGroup.m in Sources */,
+				243E8D9E183C2D3300772002 /* NSString+TKUtilities.m in Sources */,
 				24D900DA183BF83100BBC069 /* ELCAssetCell.m in Sources */,
 				24768EAB183298BE0090570C /* HomeViewController.m in Sources */,
 				24FF19B91832FC4900ABDBC4 /* PhotosDataSource.m in Sources */,
+				243E8DA4183C2D3300772002 /* TKGroupPickerController.m in Sources */,
+				243E8DA2183C2D3300772002 /* TKContactsMultiPickerController.m in Sources */,
 				24FF19CD183309E300ABDBC4 /* UIImage+Alpha.m in Sources */,
 				24FF19B51832FA0600ABDBC4 /* ExtendedPickerView.m in Sources */,
 				24D900DC183BF83100BBC069 /* ELCAssetTablePicker.m in Sources */,
 				24BD90911837864D00F0AB18 /* SettingsViewController.m in Sources */,
 				24D900D6183BF83100BBC069 /* ELCAlbumPickerController.m in Sources */,
+				243E8DA8183C2D3300772002 /* TKPeoplePickerController.m in Sources */,
+				243E8DAA183C2D3300772002 /* TKContact.m in Sources */,
 				24BD9098183792AD00F0AB18 /* AboutViewController.m in Sources */,
+				243E8DA6183C2D3300772002 /* TKNoContactViewController.m in Sources */,
 				244E8AD21832CF3C000E9C42 /* Constants.m in Sources */,
 				24FF19C7183309B800ABDBC4 /* UIImage+Resize.m in Sources */,
 				24D900DE183BF83100BBC069 /* ELCImagePickerController.m in Sources */,
+				243E8DA0183C2D3300772002 /* UIImage+TKUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
