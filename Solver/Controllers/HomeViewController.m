@@ -57,12 +57,6 @@ typedef enum
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(photosUpdated:)
                                                  name:PHOTOS_UPDATE_NOTIFICATION object:nil];
-    
-//    self.tapOnWinningImage = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapOnWinningImage)];
-//    self.tapOnExpandedImage = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapOnExpandedImage)];
-//    
-//    [self.ballImageView addGestureRecognizer:self.tapOnWinningImage];
-//    [self.winningPhotoImageView addGestureRecognizer:self.tapOnExpandedImage];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -86,7 +80,7 @@ typedef enum
         [Settings defaultSettings].didApplicationAlreadyRun = YES;
     }
     
-    if ([Settings defaultSettings].newApplicationStart)
+    if ([Settings defaultSettings].shouldStartWithQuestionScreen && [Settings defaultSettings].newApplicationStart)
     {
         [Settings defaultSettings].newApplicationStart = NO;
         [self questionsTouchInside:nil];
