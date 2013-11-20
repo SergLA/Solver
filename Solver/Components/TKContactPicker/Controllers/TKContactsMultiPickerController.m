@@ -293,6 +293,8 @@
         cell.textLabel.font = [UIFont italicSystemFontOfSize:cell.textLabel.font.pointSize];
         cell.textLabel.text = @"No Name";
     }
+    
+    cell.imageView.image = contact.thumbnail;
 	
 	UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
 	[button setFrame:CGRectMake(30.0, 0.0, 28, 28)];
