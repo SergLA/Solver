@@ -42,6 +42,8 @@ NSString * const DELETE_ROW_CONFIRMATION = @"Remove?";
 
 #pragma mark - Functions
 
+const CGFloat imageWidthHeight = 300.0;
+
 UIColor* RGBA(float r, float g, float b, float a)
 {
     return [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a];
@@ -67,7 +69,7 @@ CGRect getRandomSquare(CGRect containerRect, float maxWidth)
 
 UIImage* randomImageWithNumber(NSInteger number)
 {
-    CGRect imageRect = CGRectMake(0.0f, 0.0f, 170.0f, 170.0f);
+    CGRect imageRect = CGRectMake(0.0f, 0.0f, imageWidthHeight, imageWidthHeight);
     UIGraphicsBeginImageContext(imageRect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
     
@@ -84,7 +86,7 @@ UIImage* randomImageWithNumber(NSInteger number)
         CGContextSetStrokeColorWithColor(context, color.CGColor);
         CGContextSetFillColorWithColor(context, color.CGColor);
         CGContextBeginPath(context);
-        CGContextAddEllipseInRect(context, getRandomSquare(imageRect, 150.0));
+        CGContextAddEllipseInRect(context, getRandomSquare(imageRect, 0.85*imageWidthHeight));
         CGContextDrawPath(context, kCGPathFillStroke);
     }
     
@@ -92,9 +94,9 @@ UIImage* randomImageWithNumber(NSInteger number)
     NSString *string = [NSString stringWithFormat:@"%ld", (long)number];
     CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
     CGRect textRect = imageRect;
-    textRect.origin.y = (number >= 100) ? 35 : 10;
+    textRect.origin.y = (number >= 100) ? 50 : 2;
     [string drawInRect:textRect
-              withFont:[UIFont systemFontOfSize:(number >= 100) ? 90 : 128]
+              withFont:[UIFont systemFontOfSize:(number >= 100) ? 160 : 254]
          lineBreakMode:NSLineBreakByClipping
              alignment:NSTextAlignmentCenter];
     
@@ -107,7 +109,7 @@ UIImage* randomImageWithNumber(NSInteger number)
 
 UIImage* defaultUserpicImageWithString(NSString *string)
 {
-    CGRect imageRect = CGRectMake(0.0f, 0.0f, 170.0f, 170.0f);
+    CGRect imageRect = CGRectMake(0.0f, 0.0f, imageWidthHeight, imageWidthHeight);
     UIGraphicsBeginImageContext(imageRect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
     
