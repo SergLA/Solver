@@ -93,6 +93,8 @@
 		24BD909B183792BC00F0AB18 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BD9099183792BC00F0AB18 /* AboutViewController.xib */; };
 		24BD909E1839135600F0AB18 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BD909D1839135600F0AB18 /* Settings.m */; };
 		24BD909F1839135600F0AB18 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BD909D1839135600F0AB18 /* Settings.m */; };
+		24CD4A2418429323002FC724 /* PhotoSlider1.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CD4A2318429323002FC724 /* PhotoSlider1.m */; };
+		24CD4A2518429323002FC724 /* PhotoSlider1.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CD4A2318429323002FC724 /* PhotoSlider1.m */; };
 		24D900D5183BF83100BBC069 /* ELCAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D900C4183BF83100BBC069 /* ELCAlbumPickerController.m */; };
 		24D900D6183BF83100BBC069 /* ELCAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D900C4183BF83100BBC069 /* ELCAlbumPickerController.m */; };
 		24D900D7183BF83100BBC069 /* ELCAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D900C6183BF83100BBC069 /* ELCAsset.m */; };
@@ -220,6 +222,8 @@
 		24BD9099183792BC00F0AB18 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		24BD909C1839135600F0AB18 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		24BD909D1839135600F0AB18 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		24CD4A2218429323002FC724 /* PhotoSlider1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoSlider1.h; sourceTree = "<group>"; };
+		24CD4A2318429323002FC724 /* PhotoSlider1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoSlider1.m; sourceTree = "<group>"; };
 		24D900C3183BF83100BBC069 /* ELCAlbumPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAlbumPickerController.h; sourceTree = "<group>"; };
 		24D900C4183BF83100BBC069 /* ELCAlbumPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAlbumPickerController.m; sourceTree = "<group>"; };
 		24D900C5183BF83100BBC069 /* ELCAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAsset.h; sourceTree = "<group>"; };
@@ -568,6 +572,8 @@
 				24FF19B31832FA0600ABDBC4 /* ExtendedPickerView.m */,
 				24FF19AF1832F99800ABDBC4 /* PhotoSlider.h */,
 				24FF19B01832F99800ABDBC4 /* PhotoSlider.m */,
+				24CD4A2218429323002FC724 /* PhotoSlider1.h */,
+				24CD4A2318429323002FC724 /* PhotoSlider1.m */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -731,6 +737,7 @@
 				24D900D9183BF83100BBC069 /* ELCAssetCell.m in Sources */,
 				243E8DA1183C2D3300772002 /* TKContactsMultiPickerController.m in Sources */,
 				24D900DD183BF83100BBC069 /* ELCImagePickerController.m in Sources */,
+				24CD4A2418429323002FC724 /* PhotoSlider1.m in Sources */,
 				243E8D9F183C2D3300772002 /* UIImage+TKUtilities.m in Sources */,
 				24D900D5183BF83100BBC069 /* ELCAlbumPickerController.m in Sources */,
 				24FF19B81832FC4900ABDBC4 /* PhotosDataSource.m in Sources */,
@@ -775,6 +782,7 @@
 				24FF19CD183309E300ABDBC4 /* UIImage+Alpha.m in Sources */,
 				24FF19B51832FA0600ABDBC4 /* ExtendedPickerView.m in Sources */,
 				24D900DC183BF83100BBC069 /* ELCAssetTablePicker.m in Sources */,
+				24CD4A2518429323002FC724 /* PhotoSlider1.m in Sources */,
 				24BD90911837864D00F0AB18 /* SettingsViewController.m in Sources */,
 				24D900D6183BF83100BBC069 /* ELCAlbumPickerController.m in Sources */,
 				243E8DA8183C2D3300772002 /* TKPeoplePickerController.m in Sources */,

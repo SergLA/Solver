@@ -21,6 +21,8 @@
 #import "TKPeoplePickerController.h"
 #import "TKContact.h"
 
+#import "PhotoSlider1.h"
+
 
 typedef enum
 {
@@ -35,6 +37,7 @@ typedef enum
 
 @property (nonatomic, assign) ViewState state;
 @property (nonatomic, weak) PhotoSlider *photoSlider;
+//@property (nonatomic, weak) PhotoSlider1 *photoSlider;
 @property (nonatomic, assign) NSInteger winningPhotoID;
 
 @end
@@ -112,7 +115,10 @@ typedef enum
 - (void)setupPhotoSlider
 {
     CGRect photoSliderFrame = CGRectMake(40, 58, 240, 80);
+    
     PhotoSlider *slider = [[PhotoSlider alloc] initWithFrame:photoSliderFrame];
+    
+    //PhotoSlider1 *slider = [[PhotoSlider1 alloc] initWithFrame:photoSliderFrame];
     
     self.photoSlider = slider;
     [self.view addSubview:self.photoSlider];

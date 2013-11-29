@@ -15,6 +15,7 @@
 
 @interface PhotoSlider () <ExtendedPickerViewDelegate, UIPickerViewDataSource>
 
+@property (nonatomic, assign) BOOL shouldClear;
 @property (nonatomic, retain) ExtendedPickerView *pickerView;
 @property (nonatomic, retain) UIButton *deleteButton;
 
@@ -34,7 +35,6 @@
         self.pickerView = [[ExtendedPickerView alloc] initWithFrame:CGRectZero];
         self.pickerView.delegate = self;
         self.pickerView.dataSource = self;
-        self.pickerView.backgroundColor = [UIColor clearColor];
         
         CGAffineTransform rotate = CGAffineTransformMakeRotation(M_PI_2);
         rotate = CGAffineTransformScale(rotate, 0.25, 1.0);
@@ -52,7 +52,10 @@
         [self.deleteButton addTarget:self action:@selector(deleteButtonTouchInside:) forControlEvents:UIControlEventTouchUpInside];
         
         [self addSubview:self.deleteButton];
+        
+        self.shouldClear = [[[UIDevice currentDevice] systemVersion] floatValue] < 7.0;
     }
+    
     return self;
 }
 
@@ -88,6 +91,29 @@
     [self.deleteButton setHidden:isHidden];
 }
 
+- (void)clearView:(UIView*)view
+{
+    for (UIView *tmpView in view.subviews)
+    {
+        [self clearView:tmpView];
+        tmpView.hidden = YES;
+    }
+}
+
+- (void)updateView
+{
+    if (self.shouldClear)
+    {
+        self.backgroundColor = [UIColor clearColor];
+        
+        self.pickerView.showsSelectionIndicator = NO;
+        self.pickerView.backgroundColor = [UIColor clearColor];
+        
+        [self clearView:self.pickerView];
+        self.shouldClear = NO;
+    }
+}
+
 #pragma mark - UIPickerViewDataSource
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
@@ -97,6 +123,7 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
+    [self updateView];
     return [[[PhotosDataSource defaultDataSource] allPhotos] count];
 }
 

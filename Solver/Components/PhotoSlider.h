@@ -9,4 +9,6 @@
 
 @interface PhotoSlider : UIView
 
+- (void)updateView;
+
 @end
